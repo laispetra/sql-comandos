@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomePageStyle = styled.div`
+export const PageStyle = styled.div`
     background-color: #FFF6F1;
 `;
 export const OrangeVector = styled.img`
@@ -25,34 +25,10 @@ export const PinkVector = styled.img`
     width: 80vw; 
     height: 70vh;
 `;
-export const Ilustra = styled.img`
-    position: absolute; 
-    top: 20%; 
-    left: 60%;
-    height: 40vh;
-`;
 export const Tittle = styled.p`
     position: absolute; 
-    top: 30%; 
+    top: 5%; 
     left: 25%;
-    font-size: 3vw;
+    font-size: 1.5vw;
     font-family: 'Fredoka One', cursive;
-`
-export const SecondTittle = styled.p`
-    position: absolute; 
-    top: 30%; 
-    left: 25%;
-    font-size: 2vw;
-    font-family: 'Fredoka One', cursive;
-`
-export const HomeButton = styled.button`
-    position: absolute;
-    width: 219px;
-    height: 4vh;
-    left: 25%;
-    top: 45%;
-    text-align: center;
-    font-family: 'Fredoka One', cursive;
-    background: #FFABAB;
-    border-radius: 300px;
-`
+`;

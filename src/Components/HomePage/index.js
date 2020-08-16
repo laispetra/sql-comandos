@@ -1,28 +1,44 @@
-import React from 'react';
- 
-import { 
-    OrangeVector, 
-    RedVector, 
+import React, { useState } from 'react';
+import CommandsPage from '../CommandsPage'
+import {
+    OrangeVector,
+    RedVector,
     HomePageStyle,
-    PinkVector, 
-    Ilustra, 
-    Tittle
+    PinkVector,
+    Ilustra,
+    Tittle,
+    SecondTittle,
+    HomeButton
 } from './styles'
-import  Orange_Vector  from '../../Images/Vector.png'
-// import  Red_Vector  from '../../Images/RedVector.png'
-import  Elipse  from '../../Images/Ellipse.png'
-import  Ilustra_Vector  from '../../Images/Ilustra.png'
- 
+import Orange_Vector from '../../Images/OrangeVector.png'
+import Red_Vector from '../../Images/RedVector.png'
+import Elipse from '../../Images/Elipse.png'
+import Ilustra_Vector from '../../Images/Ilustra.png'
+
 const HomePage = () => {
+    const [page, setPage] = useState("")
+
+    const changePage = () => {
+        setPage("commands")
+    }
+
+
     return (
-        <HomePageStyle>
-            <OrangeVector src={Orange_Vector} />
-            {/* <RedVector src={Red_Vector} /> */}
-            <PinkVector src={Elipse} />
-            <Tittle>commands commandos SQL</Tittle>
-            <Ilustra src={Ilustra_Vector} />
-        </HomePageStyle>
+        page === "home" ? (
+            <HomePageStyle>
+                <OrangeVector src={Orange_Vector} />
+                <RedVector src={Red_Vector} />
+                <PinkVector src={Elipse} />
+                <SecondTittle><strike>commands</strike></SecondTittle>
+                <Tittle>commandos SQL</Tittle>
+                <HomeButton onClick={changePage}>ver dicas</HomeButton>
+                <Ilustra src={Ilustra_Vector} />
+            </HomePageStyle>
+            ) : 
+            (
+                <CommandsPage />
+            )     
     )
 }
- 
+
 export default HomePage;
